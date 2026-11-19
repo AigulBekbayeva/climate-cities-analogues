@@ -1,0 +1,10 @@
+{
+  "default": "bastin2019_rcp45_2050",
+  "scenarios": [
+    {
+      "id": "bastin2019_rcp45_2050",
+      "file": "data/scenarios/bastin2019_rcp45_2050.json",
+      "label": {"ru": "≈2050 · RCP4.5 · Bastin et al. 2019", "en": "≈2050 · RCP4.5 · Bastin et al. 2019"}
+    }
+  ]
+}

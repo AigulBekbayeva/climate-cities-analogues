@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Visit Your City's Future Climate — climate analogue geoportal</title>
+<meta name="description" content="Climate analogue map: which city today has the climate your city will have in 30–50 years.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/vendor/leaflet.css">
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+<div id="app">
+  <aside id="panel" aria-label="Panel">
+    <header class="brand">
+      <h1 data-i18n="title">Visit your city's future climate</h1>
+      <p class="lede" data-i18n="lede">Pick a city — the map shows where that climate already exists today.</p>
+    </header>
+
+    <div class="controls">
+      <div class="search">
+        <label for="q" class="sr-only" data-i18n="searchLabel">Find a city</label>
+        <input id="q" type="search" autocomplete="off" spellcheck="false" placeholder="Find a city…" data-i18n-ph="searchPh" role="combobox" aria-expanded="false" aria-controls="q-list">
+        <ul id="q-list" role="listbox" hidden></ul>
+      </div>
+      <div class="row">
+        <label for="scenario" data-i18n="scenario">Scenario</label>
+        <select id="scenario"></select>
+      </div>
+      <div class="seg" role="radiogroup" aria-label="Mode">
+        <button type="button" role="radio" aria-checked="true" data-mode="future" data-i18n="modeFuture">City's future</button>
+        <button type="button" role="radio" aria-checked="false" data-mode="reverse" data-i18n="modeReverse">Who becomes like it</button>
+      </div>
+    </div>
+
+    <section id="card" aria-live="polite"></section>
+
+    <footer class="foot">
+      <button type="button" id="open-method" class="linkish" data-i18n="method">Method &amp; data</button>
+      <span id="src-short"></span>
+    </footer>
+  </aside>
+
+  <main id="map" aria-label="Map"></main>
+
+  <div id="legend" class="legend" aria-hidden="false"></div>
+</div>
+
+<dialog id="method">
+  <form method="dialog"><button class="close" aria-label="Close">×</button></form>
+  <div id="method-body"></div>
+</dialog>
+
+<script src="assets/vendor/leaflet.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
